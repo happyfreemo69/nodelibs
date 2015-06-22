@@ -1,0 +1,23 @@
+{
+  "name": "nodeLib",
+  "version": "1.0.0",
+  "description": "list of libs for node",
+  "author": "freemo",
+  "dependencies": {
+    "lodash":   "^2.4.1",
+    "mongoose":"3.8.*",
+    "mongoose-q":"0.0.14",
+    "mongoose-id-validator":"0.1.5",
+    "optimist":"0.6.1",
+    "mailer":"0.6.7",
+    "request": "2.53.0",
+    "mustache":"2.0.0",
+    "parse": "1.4.2",
+    "bluebird":"^2.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  },
+  "private":true,
+  "license": "MIT"
+}
