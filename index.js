@@ -8,7 +8,7 @@ var exports = module.exports;
  * @param  {string} fname filename to require
  */
 function loadModule(key, fname){
-    var module = require('./lib/'+fname);
+    var module = require(__dirname+'/lib/'+fname);
     if(module instanceof Function){
         key = key[0].toUpperCase()+key.substring(1);
     }
@@ -42,7 +42,7 @@ function handleFiles(err, files){
             var exportKey = x.slice(0,-3);
             return loadModule(exportKey, x);
         }
-        var stats = fs.statSync('./lib/'+x);
+        var stats = fs.statSync(__dirname+'/lib/'+x);
         if(stats.isDirectory()){
             return loadModule(x, x);
         }
