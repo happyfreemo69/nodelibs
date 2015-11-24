@@ -1,13 +1,10 @@
 {
   "name": "nodeLibs",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "list of libs for node",
   "author": "freemo",
   "dependencies": {
     "lodash":   "^2.4.1",
-    "mongoose":"3.8.31",
-    "mongoose-q":"0.0.14",
-    "mongoose-id-validator":"0.1.5",
     "optimist":"0.6.1",
     "mailer":"0.6.7",
     "request": "2.53.0",
