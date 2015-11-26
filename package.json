@@ -1,20 +1,22 @@
 {
-  "name": "nodeLibs",
-  "version": "1.4.0",
-  "description": "list of libs for node",
-  "author": "freemo",
-  "dependencies": {
-    "lodash":   "^2.4.1",
-    "optimist":"0.6.1",
-    "mailer":"0.6.7",
-    "request": "2.53.0",
-    "mustache":"2.0.0",
-    "parse": "1.4.2",
-    "bluebird":"^2.0"
-  },
-  "devDependencies": {
-    "mocha": "^1.21.4"
-  },
-  "private":true,
-  "license": "MIT"
+    "name": "nodeLibs",
+    "version": "1.4.0",
+    "description": "list of libs for node",
+    "author": "freemo",
+    "dependencies": {
+        "lodash":   "^2.4.1",
+        "optimist":"0.6.1",
+        "mailer":"0.6.7",
+        "request": "2.53.0",
+        "mustache":"2.0.0",
+        "parse": "1.4.2",
+        "bluebird":"^2.0",
+        "winston":"2.1.1",
+        "winston-papertrail":"1.0.2"
+    },
+    "devDependencies": {
+        "mocha": "^1.21.4"
+    },
+    "private":true,
+    "license": "MIT"
 }
