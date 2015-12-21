@@ -26,6 +26,7 @@ function handleFiles(err, files){
         'tree.js',
         'urlReplacer.js',
         'network.js',
+        'jsonChecker.js',
         'modelPaginator.js',
         'paramChecker.js',
         'parseNotifier.js',
