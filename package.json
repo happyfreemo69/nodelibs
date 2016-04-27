@@ -11,8 +11,8 @@
         "mustache":"2.0.0",
         "parse": "1.4.2",
         "bluebird":"^2.0",
-        "winston":"2.1.1",
-        "winston-papertrail":"1.0.2"
+        "winston":"",
+        "winston-papertrail":""
     },
     "devDependencies": {
         "mocha": "^1.21.4"
