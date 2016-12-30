@@ -1,6 +1,6 @@
 {
     "name": "nodelibs",
-    "version": "1.7.6",
+    "version": "1.7.7",
     "description": "list of libs for node",
     "author": "freemo",
     "dependencies": {
@@ -12,7 +12,8 @@
         "parse": "1.4.2",
         "bluebird":"2.11.0",
         "winston":"0.6",
-        "winston-papertrail":""
+        "winston-papertrail":"",
+        "line-by-line":"0.1.5"
     },
     "devDependencies": {
         "mocha": "^1.21.4"
