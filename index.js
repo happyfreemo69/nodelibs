@@ -24,6 +24,7 @@ function handleFiles(err, files){
         'validator',
         'sanitizor',
         'logger',
+        'mocker',
         'tree',
         'urlReplacer',
         'network',
