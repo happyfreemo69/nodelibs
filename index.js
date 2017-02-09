@@ -7,8 +7,9 @@ var exports = module.exports;
  * @param  {string} key   name of module to be exported
  * @param  {string} fname filename to require
  */
-function loadModule(key, fname){
-    var module = require(__dirname+'/lib/'+fname);
+function loadModule(fname){
+    var module = require('./lib/'+fname);
+    var key = fname;
     if(module instanceof Function){
         key = key[0].toUpperCase()+key.substring(1);
     }
@@ -18,37 +19,29 @@ function loadModule(key, fname){
 function handleFiles(err, files){
     if(err)throw err;
     var files = [
-        'mdw/contextManager.js',
-        'mdw/reqLogger.js',
+        'mdw/contextManager',
+        'mdw/reqLogger',
         'validator',
         'sanitizor',
         'logger',
-        'tree.js',
-        'urlReplacer.js',
-        'network.js',
-        'jsonChecker.js',
-        'modelPaginator.js',
-        'paramChecker.js',
-        'parseNotifier.js',
-        'queryMerger.js',
-        'destroyer.js',
-        'errorHandler.js',
-        'inheriter.js',
-        'input.js',
-        'agent.js',
-        'bulker.js',
-        'context.js'
+        'tree',
+        'urlReplacer',
+        'network',
+        'network/headers',
+        'jsonChecker',
+        'modelPaginator',
+        'paramChecker',
+        'parseNotifier',
+        'queryMerger',
+        'destroyer',
+        'errorHandler',
+        'inheriter',
+        'input',
+        'agent',
+        'bulker',
+        'context'
     ]
-    files.forEach(function(x){
-        if(x.match(/\.js$/)){
-            var exportKey = x.slice(0,-3);
-            return loadModule(exportKey, x);
-        }
-        var stats = fs.statSync(__dirname+'/lib/'+x);
-        if(stats.isDirectory()){
-            return loadModule(x, x);
-        }
-    })
+    files.forEach(loadModule)
 }
 
 
