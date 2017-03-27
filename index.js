@@ -40,7 +40,8 @@ function handleFiles(err, files){
         'input',
         'agent',
         'bulker',
-        'context'
+        'context',
+        'slackNotifier'
     ]
     files.forEach(loadModule)
 }
