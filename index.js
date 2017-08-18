@@ -21,6 +21,7 @@ function handleFiles(err, files){
     var files = [
         'mdw/contextManager',
         'mdw/reqLogger',
+        'mdw/error',
         'validator',
         'sanitizor',
         'logger',
