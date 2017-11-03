@@ -1,6 +1,6 @@
 {
     "name": "nodelibs",
-    "version": "1.9.32",
+    "version": "1.9.33",
     "description": "list of libs for node",
     "author": "freemo",
     "dependencies": {
