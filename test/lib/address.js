@@ -41,4 +41,12 @@ describe('address', function(){
         assert.equal(res.zipCode, 1670);
         assert.equal(res.town, 'Pepingen');
     });
+
+    it('google nostreet', function(){
+        var p = JSON.parse('{"address_components":[{"long_name":"Arngrímsgata","short_name":"Arngrímsgata","types":["route"]},{"long_name":"Vesturbær","short_name":"Vesturbær","types":["political","sublocality","sublocality_level_1"]},{"long_name":"Reykjavík","short_name":"RVK","types":["locality","political"]},{"long_name":"Iceland","short_name":"IS","types":["country","political"]}],"formatted_address":"Arngrímsgata, Reykjavík, Iceland","geometry":{"bounds":{"northeast":{"lat":64.14194549999999,"lng":-21.9516287},"southwest":{"lat":64.14145440000001,"lng":-21.9537038}},"location":{"lat":64.1417,"lng":-21.9526662},"location_type":"GEOMETRIC_CENTER","viewport":{"northeast":{"lat":64.14304893029151,"lng":-21.9513172697085},"southwest":{"lat":64.1403509697085,"lng":-21.9540152302915}}},"place_id":"ChIJwTb9aDAL1kgRgG-HVxMokq4","types":["route"]}')
+        var res = Address.parseGoogle(p);
+        assert.equal(res.address, 'Arngrímsgata');
+        assert.equal(res.zipCode, '');
+        assert.equal(res.town, 'Reykjavík');
+    })
 });
