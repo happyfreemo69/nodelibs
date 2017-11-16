@@ -1,8 +1,11 @@
 mocha=./node_modules/mocha/bin/mocha --recursive
-folders=logger
-dirs=$(addprefix test/,$(folders))
+folders=logger root
+files=address asyncPromiseHandler mocker validator
+paths=$(addprefix test/lib/,$(files))
 .PHONY: test $(folders) cover
 test: $(folders)
 
 logger:
 	@$(mocha) test/lib/logger
+root:
+	@$(mocha) $(path)
