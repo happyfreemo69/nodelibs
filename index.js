@@ -19,6 +19,7 @@ function loadModule(fname){
 function handleFiles(err, files){
     if(err)throw err;
     var files = [
+        'asyncPromiseHandler',
         'mdw/contextManager',
         'mdw/reqLogger',
         'mdw/error',
