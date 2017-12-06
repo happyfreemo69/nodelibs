@@ -1,6 +1,6 @@
 {
     "name": "nodelibs",
-    "version": "1.9.38",
+    "version": "1.10.0",
     "description": "list of libs for node",
     "author": "freemo",
     "dependencies": {
@@ -11,8 +11,6 @@
         "mustache": "2.0.0",
         "parse": "1.4.2",
         "bluebird": "2.11.0",
-        "winston": "0.6",
-        "winston-papertrail": "",
         "line-by-line": "0.1.5"
     },
     "devDependencies": {
