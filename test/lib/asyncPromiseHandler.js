@@ -37,6 +37,12 @@ describe('asyncPromiseHandler', function(){
         throw new Error('should have thrown');
     });
 
+    it('no throw if stack disabled', function(){
+        APH.set('stackEnabled', false);
+        APH.tail = 2;
+        //THIS SHOULD NOT THROW: PROD MOD
+    });
+
     it('isResolved as false if one of promise has not resolved yet', function(){
         APH.set('stackEnabled', true);
         APH.tail = customSetTimeout(function(){
