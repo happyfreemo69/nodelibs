@@ -28,6 +28,7 @@ function handleFiles(err, files){
         'logger',
         'mocker',
         'tree',
+        'bbcodeConverter',
         'urlReplacer',
         'network',
         'network/headers',
