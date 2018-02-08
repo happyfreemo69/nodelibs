@@ -265,7 +265,7 @@ describe('validator', function(){
             var schema = {
                 test : V.arr(),
             };
-            return V.validate(schema, {test: [1,2,3]}).then(done.bind(null,null));
+            V.validate(schema, {test: [1,2,3]}).then(done.bind(null,null));
         });
         it('ok arr with a objId expected', function(done){
             var schema = {

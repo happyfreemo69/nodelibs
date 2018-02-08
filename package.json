@@ -14,7 +14,8 @@
         "line-by-line": "0.1.5"
     },
     "devDependencies": {
-        "mocha": "^1.21.4"
+        "mocha": "^3.4.2",
+        "mocha-jenkins-reporter": "0.3.10"
     },
     "private": true,
     "license": "MIT"
