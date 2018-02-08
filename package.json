@@ -1,17 +1,18 @@
 {
     "name": "nodelibs",
-    "version": "1.10.7",
+    "version": "1.10.8",
     "description": "list of libs for node",
     "author": "freemo",
     "dependencies": {
-        "lodash": "2.4.2",
-        "optimist": "0.6.1",
-        "mailer": "0.6.7",
-        "request": "2.53.0",
-        "mustache": "2.0.0",
-        "parse": "1.4.2",
+        "bboxed": "git@github.com:ackwell/bboxed.git#ed626efbca4ace5559462b25f6d0debd68a1b076",
         "bluebird": "2.11.0",
-        "line-by-line": "0.1.5"
+        "line-by-line": "0.1.5",
+        "lodash": "2.4.2",
+        "mailer": "0.6.7",
+        "mustache": "2.0.0",
+        "optimist": "0.6.1",
+        "parse": "1.4.2",
+        "request": "2.53.0"
     },
     "devDependencies": {
         "mocha": "^3.4.2",

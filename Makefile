@@ -8,6 +8,7 @@ test: $(folders)
 
 logger:
 	@$(mocha) test/lib/logger
+
 root:
 	@$(mocha) $(path)
 
