@@ -43,6 +43,7 @@ function handleFiles(err, files){
         'input',
         'agent',
         'bulker',
+        'ttug',
         'context',
         'asyncPromiseHandler',
         'slackNotifier',
