@@ -59,4 +59,7 @@ describe('bbcodeConverter', function(){
         assert.equal(bb.toHtml('[b]<span>test</span>[/b]'), '<strong>&lt;span&gt;test&lt;/span&gt;</strong>');
     });
 
+    it('ignores [list][/list]', function(){
+        assert.equal(bb.toHtml('z[list]a[list]b[/list]c[/list]d'), 'zabcd');
+    });
 });
