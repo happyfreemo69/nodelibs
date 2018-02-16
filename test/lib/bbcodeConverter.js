@@ -62,4 +62,8 @@ describe('bbcodeConverter', function(){
     it('ignores [list][/list]', function(){
         assert.equal(bb.toHtml('z[list]a[list]b[/list]c[/list]d'), 'zabcd');
     });
+
+    it('replaces whitespaces', function(){
+        assert.equal(bb.toHtml('\r\na\rb\nc\r\nd'), '<br/>a\rb<br/>c<br/>d');
+    });
 });
