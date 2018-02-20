@@ -66,4 +66,8 @@ describe('bbcodeConverter', function(){
     it('replaces whitespaces', function(){
         assert.equal(bb.toHtml('\r\na\rb\nc\r\nd'), '<br/>a\rb<br/>c<br/>d');
     });
+
+    it('validate lists', function(){
+        assert.equal(bb.validate('[list][*]test\n[*][list][list][list][list]fuck[/list]'), true);
+    });
 });
