@@ -298,4 +298,41 @@ describe('validator', function(){
             V.validate(schema, {test: 'test'}).catch(done.bind(null,null))
         });
     })
+
+
+    describe('or', function(){
+
+        it('ok one rule', function(done){
+            var schema = {
+                _glob0 : V.or({
+                    test:V.str().req()
+                }),
+            };
+            V.validate(schema, {test: '12,13,1.1,1.2'}).then(done.bind(null,null))
+        });
+
+        it('ko two rules', function(done){
+            var schema = {
+                _glob0 : V.or({
+                    test:V.str().req(),
+                    test3:V.str().req()
+                }),
+            };
+            V.validate(schema, {test2: '12,13,1.1,1.2'}).catch(e=>{
+                assert.equal(e, 'test expects something (undefined) OR test3 expects something (undefined)')
+                done();
+            })
+        });
+
+        it('ok one among failures', function(done){
+            var schema = {
+                _glob0 : V.or({
+                    test:V.str().req(),
+                    test3:V.str().req(),
+                    test2:V.num()
+                }),
+            };
+            V.validate(schema, {test2: 5}).then(done.bind(null,null));
+        });
+    })
 });
