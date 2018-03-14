@@ -60,7 +60,7 @@ describe('bbcodeConverter', function(){
     });
 
     it('ignores [list][/list]', function(){
-        assert.equal(bb.toHtml('z[list]a[list]b[/list]c[/list]d'), 'zabcd');
+        assert.equal(bb.toHtml('z[list]a[list]b[/list]c[/list]d'), 'z a b c d');
     });
 
     it('replaces whitespaces', function(){
@@ -70,4 +70,9 @@ describe('bbcodeConverter', function(){
     it('validate lists', function(){
         assert.equal(bb.validate('[list][*]test\n[*][list][list][list][list]fuck[/list]'), true);
     });
+
+    it('validate lists', function(){
+        assert.equal(bb.validate("s[b]wrong[/b]f\n [list][*]a[/list]"), true);
+    });
+
 });
