@@ -1,0 +1,34 @@
+{
+    "id": "2",
+    "name": "Batiment B",
+    "address": "9 rue de la claire",
+    "address2": "complement addresse",
+    "zipCode": "69009",
+    "town": "Vaise",
+    "comment": "Relié au 7 rue ferrandiere (une seule cage d'escalier pour les deux immeubles)",
+    "floors": "-2,-1,RDC,1,2,3,4,5,6",
+    "geometry": [45.754184,4.826913,45.754060,4.826821,45.754006,4.826968,45.753991,4.826957,45.753950,4.827070,45.754097,4.827169,45.754101,4.827158,45.754184,4.826913],
+    "rleft": 4.826821,
+    "rtop": 45.75395,
+    "rright": 4.827169,
+    "rbottom": 45.754184,
+    "isVertical":true,
+    "reference": "syndic_say_69",
+    "livingPeople": 3,
+    "physicalBuildingId": "42",
+    "geoLoc":{ "lng":3, "lat":3 },
+    "links": {
+        "self": "https://lyyti-synty-mock.ngrok.com/v1/buildings/10",
+        "physicalBuilding": "https://lyyti-synty-mock.ngrok.com/v1/physicalBuildings/1",
+        "issues": "https://lyyti-synty-mock.ngrok.com/v1/issues?zoneId=2",
+        "details": "https://lyyti-synty-mock.ngrok.com/v1/buildings/2",
+        "users": "https://lyyti-synty-mock.ngrok.com/v1/users?buildingId=2&dude=56&toto=43"
+    },
+    "other_links": {
+        "self": "https://lyyti-synty-mock.ngrok.com/v1/miaou/10",
+        "physicalBuilding": "https://lyyti-synty-mock.ngrok.com/v1/physicalBuildings/1",
+        "issues": "https://lyyti-synty-mock.ngrok.com/v1/issues?zoneId=2",
+        "details": "https://lyyti-synty-mock.ngrok.com/v1/buildings/2",
+        "users": "https://lyyti-synty-mock.ngrok.com/v1/users?buildingId=2"
+    }
+}
