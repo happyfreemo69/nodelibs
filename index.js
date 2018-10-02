@@ -32,6 +32,7 @@ function handleFiles(err, files){
         'urlReplacer',
         'network',
         'network/headers',
+        'si',
         'jsonChecker',
         'modelPaginator',
         'paramChecker',
