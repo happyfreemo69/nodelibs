@@ -129,6 +129,24 @@ describe('validator', function(){
             })
         });
     });
+    describe('html',function(){
+        it('html ok',function(done){
+            var schema = {
+                test : V.html({a:['href'],b:[],img:['src']})
+            };
+            V.validate(schema, {test: '<a href="tada">coucou</a>, <b>vous</b><img src="ccc" />'}).then(function(err){
+                done();
+            })
+        })
+        it('html fails',function(done){
+            var schema = {
+                test : V.html({a:['href'],b:[],img:['src']})
+            };
+            V.validate(schema, {test: '<a href="tada">coucou</a>, <div>vous</div><img src="ccc" />'}).catch(function(err){
+                done();
+            })
+        })
+    });
     describe('multiple fields', function(){
         it('both required and present', function(done){
             var schema = {
