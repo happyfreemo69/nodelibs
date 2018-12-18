@@ -146,6 +146,14 @@ describe('validator', function(){
                 done();
             })
         })
+        it('no html',function(done){
+            var schema = {
+                test : V.html({a:['href'],b:[],img:['src']})
+            };
+            V.validate(schema, {}).then(function(err){
+                done();
+            })
+        })
     });
     describe('multiple fields', function(){
         it('both required and present', function(done){
