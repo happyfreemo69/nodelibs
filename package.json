@@ -13,7 +13,7 @@
         "optimist": "0.6.1",
         "parse": "1.4.2",
         "request": "2.53.0",
-        "sanitize-html": "^1.20.0"
+        "sanitize-html": "git@github.com:happyfreemo69/sanitize-html.git#master"
     },
     "devDependencies": {
         "mocha": "3.4.2",
