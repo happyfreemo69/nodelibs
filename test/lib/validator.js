@@ -1,6 +1,5 @@
 var V = require('../../lib/validator');
 var assert = require('assert');
-function OK(done){return function(){done()}}
 describe('validator', function(){
 
     describe('str', function(){
@@ -130,29 +129,57 @@ describe('validator', function(){
         });
     });
     describe('html',function(){
-        it('html ok',function(done){
+        it('html ok',function(){
+            var schema = {
+                test : V.html({a:['href', 'target'],b:[],img:['src']})
+            };
+            return V.validate(schema, {test: '<a href="tada" target="_blanc">coucou</a>, <b>vous <img src="ccc" /></b>'})
+                .catch(err => {
+                    assert(false);
+                })
+        });
+
+        it('html ok event if empty attr',function(){
+            var schema = {
+                test : V.html({a:['href', 'target'],b:[],img:['src', 'alt']})
+            };
+            return V.validate(schema, {test: '<a href="tada" target="_blanc">coucou</a>, <b>vous <img src="ccc" alt="" /></b>'})
+                .catch(err => {
+                    assert(false);
+                })
+        });
+
+        it('html fails (tag)',function(){
             var schema = {
                 test : V.html({a:['href'],b:[],img:['src']})
             };
-            V.validate(schema, {test: '<a href="tada">coucou</a>, <b>vous</b><img src="ccc" />'}).then(function(err){
-                done();
-            })
+            return V.validate(schema, {test: '<a href="tada">coucou</a>, <div>vous</div><img src="ccc" />'})
+                .catch(err => {
+                    assert(err.length === 1);
+                    assert(err[0] === 'tag (div) is not allowed');
+                })
         })
-        it('html fails',function(done){
+
+        it('html fails (attr)',function(){
             var schema = {
                 test : V.html({a:['href'],b:[],img:['src']})
             };
-            V.validate(schema, {test: '<a href="tada">coucou</a>, <div>vous</div><img src="ccc" />'}).catch(function(err){
-                done();
-            })
+            return V.validate(schema, {test: '<a>coucou</a> free text, <img src="ccc" alt=""/>'})
+                .catch(err => {
+                    assert(err.length === 1);
+                    assert(err[0] === 'attr (alt) is not allowed for the tag (img)');
+                })
         })
-        it('no html',function(done){
+
+        it('no html',function(){
             var schema = {
                 test : V.html({a:['href'],b:[],img:['src']})
             };
-            V.validate(schema, {}).then(function(err){
-                done();
-            })
+
+            return V.validate(schema, {})
+                .catch(err => {
+                    assert(true);
+                })
         })
     });
     describe('multiple fields', function(){
