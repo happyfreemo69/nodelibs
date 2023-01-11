@@ -36,7 +36,6 @@ function handleFiles(err, files){
         'jsonChecker',
         'modelPaginator',
         'paramChecker',
-        'parseNotifier',
         'queryMerger',
         'destroyer',
         'errorHandler',
