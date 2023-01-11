@@ -9,13 +9,10 @@
         "cheerio": "0.22.0",
         "line-by-line": "0.1.5",
         "lodash": "4.17.13",
-        "mailer": "0.6.7",
-        "mustache": "2.0.0",
-        "optimist": "0.6.1",
+        "yargs": "17.6.2",
         "parse": "1.4.2",
-        "request": "2.68.0",
-        "sanitize-html": "git@github.com:happyfreemo69/sanitize-html.git#master"
-    },
+        "request": "2.68.0"
+     },
     "devDependencies": {
         "mocha": "3.4.2",
         "mocha-jenkins-reporter": "0.3.10"
