@@ -13,7 +13,6 @@
     "devDependencies": {
         "mocha": "9.2.2",
         "mocha-jenkins-reporter": "0.4.8"
-		"
     },
     "private": true,
     "license": "MIT"
