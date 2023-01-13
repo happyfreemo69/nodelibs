@@ -6,6 +6,7 @@
     "dependencies": {
         "bbhtml": "git@github.com:happyfreemo69/bbhtml.git#v1.0.1",
         "bluebird": "2.11.0",
+		"cheerio": "1.0.0-rc12",
         "line-by-line": "0.1.5",
         "lodash": "4.17.21",
         "yargs": "17.6.2"
