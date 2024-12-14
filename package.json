@@ -17,8 +17,8 @@
         "sanitize-html": "git@github.com:happyfreemo69/sanitize-html.git#master"
     },
     "devDependencies": {
-        "mocha": "3.4.2",
-        "mocha-jenkins-reporter": "0.3.10"
+        "mocha": "10.2.0",
+        "mocha-jenkins-reporter": "0.4.8"
     },
     "private": true,
     "license": "MIT"
