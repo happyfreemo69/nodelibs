@@ -46,7 +46,6 @@ function handleFiles(err, files){
         'ttug',
         'context',
         'asyncPromiseHandler',
-        'slackNotifier',
         'address'
     ]
     files.forEach(loadModule)
